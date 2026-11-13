@@ -3,32 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de nosotros - Galería de Recetas</title>
+    <title>Nosotros - Recetario Web</title>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-
     <header class="cabecera-sitio">
         <nav class="barra-navegacion">
-            <a class="logo">🍳 RecetasApp</a>
+            <a class="logo">🍳 Recetario Web</a>
             <ul class="enlaces-nav">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="about.html" class="activo">Acerca de nosotros</a></li>
+                <li><a href="about.html" class="activo">Nosotros</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section style="max-width: 600px; margin: 40px auto; text-align: center;">
-            <h1>Acerca de nosotros</h1>
-            <p>Proyecto desarrollado para el trabajo práctico final aplicando consumo de APIs, Fetch y diseño responsivo.</p>
+        <section class="seccion-equipo" aria-labelledby="titulo-equipo">
+            <h1 id="titulo-equipo" class="titulo-pagina">Nuestro Equipo</h1>
+
+            <!-- Reutilizamos la grilla .cards (1 col mobile, 2 tablet, 3 desktop) y .tarjeta -->
+            <div class="cards">
+                <article class="tarjeta">
+                    <img src="img/santy.jpg" alt="Foto de Santy, Desarrollador Frontend y Diseño UI" loading="lazy">
+                    <div class="tarjeta-info">
+                        <h2>Santy</h2>
+                        <span class="campo-cocina">Desarrollo Frontend &amp; Diseño UI</span>
+                        <span class="campo-detalle">Maquetación semántica, sistema de diseño mobile-first y paleta de colores.</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/martin.jpg" alt="Foto de Martín, Integración de API y Lógica JavaScript" loading="lazy">
+                    <div class="tarjeta-info">
+                        <h2>Martín</h2>
+                        <span class="campo-cocina">Integración de API &amp; Lógica JS</span>
+                        <span class="campo-detalle">Consumo asíncrono de DummyJSON, arquitectura modular y manejo de estados.</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/gus.jpg" alt="Foto de Gus, Validación de Formularios y Documentación" loading="lazy">
+                    <div class="tarjeta-info">
+                        <h2>Gus</h2>
+                        <span class="campo-cocina">Formularios, Validación &amp; Documentación</span>
+                        <span class="campo-detalle">Validación de datos, pruebas de accesibilidad W3C y redacción técnica.</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Panel autoajustable inferior con los 3 ejes del proyecto -->
+        <section class="panel-proyecto" aria-labelledby="titulo-proyecto">
+            <h2 id="titulo-proyecto" class="subtitulo-panel">Sobre el Proyecto</h2>
+
+            <div class="grilla-info">
+                <article class="bloque-info">
+                    <h3>🎨 Temática y Decisiones de Diseño</h3>
+                    <p>
+                        Elegimos una temática gastronómica cálida y cercana. La paleta de colores combina tonos tierra y anaranjados (<code>#4a2c1a</code>, <code>#e8590c</code> y <code>#fff4e6</code>) que evocan la cocina casera y garantizan un alto contraste de lectura. El diseño sigue una metodología <strong>mobile-first</strong> con tarjetas de bordes redondeados y transiciones suaves para una navegación fluida en cualquier pantalla.
+                    </p>
+                </article>
+
+                <article class="bloque-info">
+                    <h3>🌐 Información sobre la API</h3>
+                    <p>
+                        Los datos se consumen de forma dinámica desde la API pública <strong>DummyJSON Recipes</strong> (<code>dummyjson.com/recipes</code>). De cada registro extraemos el nombre del plato, imagen, tipo de cocina, tiempo de preparación, dificultad y calificación, permitiendo además búsquedas en tiempo real mediante su endpoint <code>/search</code>.
+                    </p>
+                </article>
+
+                <article class="bloque-info">
+                    <h3>⚙️ Detalles Técnicos del Desarrollo</h3>
+                    <p>
+                        La aplicación está construida con <strong>HTML5 semántico</strong>, <strong>CSS3 con variables nativas</strong> y <strong>JavaScript modular (ES Modules)</strong> separado por responsabilidades (obtención de datos, modelado con clases y renderizado en el DOM). Incluye control de estados de carga, manejo de errores con opción de reintento y optimización de búsqueda con <em>debounce</em>.
+                    </p>
+                </article>
+            </div>
         </section>
     </main>
 
     <footer class="pie-pagina">
-        <p>Integrantes: Gustavo Fossati · Martín Romano · Santiago Biondo &nbsp;|&nbsp; 🔗 <a href="https://github.com/mr185104/TPFinalAPI" target="_blank">github.com/mr185104/TPFinalAPI</a> &nbsp;|&nbsp; Datos: DummyJSON Recipes API</p>
+        <p>Desarrollado por Santy, Martín y Gus &middot; <a href="https://github.com" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></p>
     </footer>
-
 </body>
 </html>

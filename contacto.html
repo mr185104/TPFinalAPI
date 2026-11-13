@@ -3,32 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Galería de Recetas</title>
+    <title>Contacto - Recetario Web</title>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-
     <header class="cabecera-sitio">
         <nav class="barra-navegacion">
-            <a class="logo">🍳 RecetasApp</a>
+            <a href="index.html" class="logo">🍳 Recetario Web</a>
             <ul class="enlaces-nav">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="contacto.html" class="activo">Contacto</a></li>
-                <li><a href="about.html">Acerca de nosotros</a></li>
+                <li><a href="about.html">Nosotros</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section style="max-width: 600px; margin: 40px auto; text-align: center;">
-            <h1>Contacto</h1>
-            <p>Próximamente formulario de contacto y vías de comunicación.</p>
+        <section class="seccion-bloque">
+            <div class="caja-blanca">
+                <h1 class="titulo-subrayado">Dejá tu Mensaje en el Recetario</h1>
+                <p>¿Tenés alguna sugerencia para la página, querés compartir una idea o mandar tu consulta culinaria? Completá el formulario y unite a nuestra comunidad de cocina.</p>
+            </div>
+        </section>
+
+        <section class="formulario-layout">
+            <div class="formulario-imagen">
+                <img src="img/libro.jpg" alt="Libro de recetas abierto con ingredientes y utensilios de cocina" loading="lazy">
+            </div>
+            
+            <div class="formulario-caja">
+                <form id="form-contacto" action="#" method="POST" class="formulario-estructura" novalidate>
+                    
+                    <label class="campo-etiqueta">
+                        Nombre y Apellido
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" class="campo-entrada">
+                    </label>
+
+                    <label class="campo-etiqueta">
+                        Correo Electrónico
+                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" class="campo-entrada">
+                    </label>
+
+                    <label class="campo-etiqueta">
+                        Teléfono de Contacto (10 dígitos)
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 1123456789" class="campo-entrada">
+                    </label>
+
+                    <label class="campo-etiqueta">
+                        Motivo de Consulta
+                        <select id="motivo" name="motivo" class="campo-entrada">
+                            <option value="">Seleccioná una opción...</option>
+                            <option value="sugerencia">Sugerencia para la web</option>
+                            <option value="receta">Proponer una receta</option>
+                            <option value="otro">Otra consulta</option>
+                        </select>
+                    </label>
+
+                    <fieldset class="grupo-radio">
+                        <legend class="campo-etiqueta">Preferencia de Contacto</legend>
+                        <div class="radio-opciones">
+                            <label><input type="radio" name="preferencia" value="email" checked> Email</label>
+                            <label><input type="radio" name="preferencia" value="telefono"> Teléfono</label>
+                        </div>
+                    </fieldset>
+
+                    <label class="campo-etiqueta">
+                        Tu Mensaje
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí acá tu sugerencia o mensaje..." class="campo-entrada campo-area"></textarea>
+                    </label>
+
+                    <button type="submit" class="boton-formulario">
+                        Enviar Formulario
+                    </button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer class="pie-pagina">
-        <p>Integrantes: Gustavo Fossati · Martín Romano · Santiago Biondo &nbsp;|&nbsp; 🔗 <a href="https://github.com/mr185104/TPFinalAPI" target="_blank">github.com/mr185104/TPFinalAPI</a> &nbsp;|&nbsp; Datos: DummyJSON Recipes API</p>
+        <p>Desarrollado por Santy, Martín y Gus &middot; <a href="https://github.com" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></p>
     </footer>
 
+    <!-- Script de validación -->
+    <script src="js/contacto.js"></script>
 </body>
 </html>
