@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP Evaluativo Final</title>
+    <title>Galería de Recetas</title>
     <link rel="stylesheet" href="CSS/styles.css">
-
 </head>
 <body>
-    <footer> 
-        Integrantes: Gustavo Fossati · Martín Romano · Santiago Biondo &nbsp;|&nbsp; 🔗 github.com/mr185104/TPFinalAPI &nbsp;|&nbsp; Datos: nombre de la API 
-    </footer>
-</body>
 
+    <header class="cabecera-sitio">
+        <nav class="barra-navegacion">
+            <a href="index.html" class="logo">🍳 RecetasApp</a>
+            <ul class="enlaces-nav">
+                <li><a href="index.html" class="activo">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="about.html">Acerca de nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contenedor-buscador">
+            <input type="text" id="buscador" placeholder="Buscar receta...">
+        </div>
+        <div id="galeria" class="cards"></div>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>Integrantes: Gustavo Fossati · Martín Romano · Santiago Biondo &nbsp;|&nbsp; 🔗 <a href="https://github.com/mr185104/TPFinalAPI" target="_blank">github.com/mr185104/TPFinalAPI</a> &nbsp;|&nbsp; Datos: DummyJSON Recipes API</p>
+    </footer>
+
+    <!-- Importante: type="module" para que funcionen los import/export -->
+    <script type="module" src="js/app.js"></script>
+</body>
 </html>
